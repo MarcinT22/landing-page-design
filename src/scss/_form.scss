@@ -1,0 +1,121 @@
+.form {
+    border-radius: 20px;
+    border: 1px solid $frameColor;
+    padding: 20px 25px;
+    margin: 24px 0;
+    max-width: 687px;
+
+    @media (max-width:$screen-md) {
+        padding: 20px 15px;
+        margin:20px auto;
+    }
+
+    &__header {
+        font-size: 32px;
+        color: $secondaryColor;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    &__row {
+        display: flex;
+        gap: 15px;
+
+        @media (max-width:$screen-sm) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        margin: 8px 0;
+        border: 1px solid $inputBorderColor;
+        border-radius: 10px;
+        height: 48px;
+        padding: 15px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s, color 0.3s;
+
+        &::placeholder {
+            color: $placeholderColor;
+        }
+
+        &:focus {
+            border-color: $secondaryColor;
+
+            &::placeholder {
+                color: $secondaryColor;
+            }
+        }
+
+    }
+
+    &__button {
+        background-color: $primaryColor;
+        padding: 16px 10px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        display: block;
+        border: 0;
+        width: 100%;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        outline: none;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            background-color: darken($primaryColor, 5);
+        }
+
+        &--hidden {
+            display: none;
+        }
+
+    }
+
+    &__security {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 23px;
+
+        @media (max-width:$screen-sm) {
+            gap: 3px;
+        }
+    }
+
+    &__loader {
+        border: 3px solid $primaryColor;
+        border-top-color: rgba(0, 0, 0, 0);
+        width: 20px;
+        height: 20px;
+        margin: 20px auto;
+        border-radius: 100%;
+        display: none;
+        animation: loader 0.7s ease-in-out infinite;
+
+        &--visible {
+            display: block;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

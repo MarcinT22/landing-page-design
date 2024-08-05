@@ -1,0 +1,15 @@
+.cards {
+    padding: 9px 15px;
+    text-align: center;
+    background: #fff;
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+
+    &__img {
+        max-height: 40px;
+    }
+}

@@ -1,0 +1,71 @@
+.gallery {
+    position: relative;
+
+    &__price {
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        background-color: $primaryColor;
+        color: #fff;
+        font-weight: 700;
+        font-size: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -17px;
+        right: -6px;
+
+        @media (max-width:$screen-md) {
+            top: 0;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    }
+
+    &__mainImg {
+        width: 480px;
+        height: 480px;
+        object-fit: contain;
+
+        @media (max-width:$screen-xs) {
+            height: 320px;
+        }
+    }
+
+
+    &__thumbnails {
+        display: flex;
+        gap: 40px;
+        margin-top: 10px;
+
+        @media (max-width:$screen-xs) {
+            gap: 20px;
+        }
+    }
+
+
+
+    &__thumb {
+        width: 132px;
+        height: 132px;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 1px solid $primaryColor;
+        transition:opacity 0.2s;
+
+        &:hover{
+            opacity: 0.8;
+        }
+
+        @media (max-width:$screen-xs) {
+            height: 100px;
+
+        }
+    }
+}

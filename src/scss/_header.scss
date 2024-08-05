@@ -1,0 +1,35 @@
+.header {
+    padding-top: 15px;
+    padding-bottom: 23px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$screen-md) {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        &:first-child {
+            @media (min-width:$screen-md) {
+                width: 100%;
+                max-width: 481px;
+            }
+
+
+
+        }
+
+        &:last-child {
+            @media (min-width:$screen-md) {
+                width: calc(100% - 481px);
+                padding-left: 20px;
+
+            }
+        }
+
+
+    }
+}
